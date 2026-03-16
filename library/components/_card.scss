@@ -1,0 +1,22 @@
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #dddddd;
+    box-shadow: $base-box-shadow;
+    max-width: 500px;
+    margin: $base-margin;
+
+    .card-title {
+        font-size: $base-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
