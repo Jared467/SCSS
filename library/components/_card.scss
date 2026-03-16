@@ -1,13 +1,15 @@
+@use 'sass:math';
+
 .card {
     display: block;
     padding: $base-padding;
     border: $base-border-thickness solid #dddddd;
     box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
     max-width: 500px;
-    margin: $base-margin;
 
     .card-title {
-        font-size: $base-font-lg;
+        font-size: $font-size-lg;
         padding-bottom: $base-padding;
         font-weight: bold;
     }
