@@ -1,3 +1,5 @@
+@use '../variable' as var;
+
 %flex-layout {
     width: 100%;
     display: flex;
@@ -8,17 +10,17 @@
 
 .navbar {
     @extend %flex-layout;
-    padding: $base-padding $base-padding * 2;
-    box-shadow: $base-box-shadow;
+    padding: var.$base-padding var.$base-padding * 2;
+    box-shadow: var.$base-box-shadow;
     .site-title {
-        font-size: $font-size-lg;
+        font-size: var.$font-size-lg;
     }
     .container {
         @extend %flex-layout;
     }
 }
 
-@each $key, $val in $colors {
+@each $key, $val in var.$colors {
     .navbar-#{$key} {
         @extend .navbar;
         background-color: $val;

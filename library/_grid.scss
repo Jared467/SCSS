@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'breakpoint' as bp;
 
 $grid-columns: 12;
 $grid-gaps: (
@@ -48,7 +49,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 }
 
 // col classes
-@include xs {
+@include bp.xs {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-xs {
             @include col($i);
@@ -56,7 +57,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
 }
 
-@include sm {
+@include bp.sm {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-sm {
             @include col($i);
@@ -64,7 +65,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
 }
 
-@include md {
+@include bp.md {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-md {
             @include col($i);
@@ -72,7 +73,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
 }
 
-@include lg {
+@include bp.lg {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-lg {
             @include col($i);
@@ -80,7 +81,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
 }
 
-@include xl {
+@include bp.xl {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-xl {
             @include col($i);
